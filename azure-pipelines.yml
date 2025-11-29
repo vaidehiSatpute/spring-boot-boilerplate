@@ -22,7 +22,7 @@ steps:
   task: CopyFile@2
   inputs:
     SourceFolder: '$(System.DefaultWorkingDirectory)'
-    Contents: '**'
+    Contents: '**/target/* .(war|jar) ?'
     TargetFolder: '$(build.artifactstagingdirectory)'
 
 
