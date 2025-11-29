@@ -19,7 +19,9 @@ steps:
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
 
-  task: CopyFile@2
+  
+  
+- task: CopyFile@2
   inputs:
     SourceFolder: '$(System.DefaultWorkingDirectory)'
     Contents: '**/target/* .(war|jar) ?'
